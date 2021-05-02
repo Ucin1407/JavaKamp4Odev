@@ -1,0 +1,38 @@
+public class GameInfo {
+ 
+	private String gameName;
+	private double gamePrice;
+	private double storeArea;
+	private double downloadTime;
+	public GameInfo(String gameName, double gamePrice, double storeArea, double downloadTime) {
+		
+		this.gameName = gameName;
+		this.gamePrice = gamePrice;
+		this.storeArea = storeArea;
+		this.downloadTime = downloadTime;
+	}
+	public String getGameName() {
+		return gameName;
+	}
+	public void setGameName(String gameName) {
+		this.gameName = gameName;
+	}
+	public double getGamePrice() {
+		return gamePrice;
+	}
+	public void setGamePrice(double gamePrice) {
+		this.gamePrice = gamePrice;
+	}
+	public double getStoreArea() {
+		return storeArea;
+	}
+	public void setStoreArea(double storeArea) {
+		this.storeArea = storeArea;
+	}
+	public double getDownloadTime() {
+		return downloadTime;
+	}
+	public void setDownloadTime(double downloadTime) {
+		this.downloadTime = downloadTime;
+	}
+}

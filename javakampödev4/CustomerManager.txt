@@ -1,0 +1,39 @@
+public class CustomerManager {
+	
+	private interfaces [] interFaces;
+
+	public CustomerManager(interfaces [] interFaces) {
+		
+		this.interFaces = interFaces;
+		
+	}
+	public void add(Customer customer,GameInfo gameinfo) {
+		System.out.println("Müsteri listeye eklendi : " + customer.getFirstName() + " " + customer.getLastName());
+		
+		GameInfoManager gameinfomanager = new GameInfoManager();
+		gameinfomanager.add(gameinfo.getGameName() + " sepete eklendi..");
+		
+		Utils.runİnterfaces(interFaces, customer.getFirstName());
+		Utils.runİnterfaces(interFaces, gameinfo.getGameName());
+	}
+	
+	public void pay(Customer customer,GameInfo gameinfo) {
+		System.out.println(customer.getFirstName() + " " + customer.getLastName() + " tarafından " + customer.getCardNumber() +  " numaralı kart tarafından " + gameinfo.getGamePrice() + " tl lik ödeme gerçekleşti");
+		
+		GameInfoManager gameinfomanager = new GameInfoManager();
+		gameinfomanager.pay(gameinfo.getGamePrice() +" tl lik ödeme gerçekleşti..");
+			
+		Utils.runİnterfaces(interFaces, customer.getFirstName());
+		Utils.runİnterfaces(interFaces, gameinfo.getGameName());
+	}
+	public void setUp(Customer customer, GameInfo gameinfo) {
+		System.out.println(gameinfo.getGameName() + " adlı oyun " + customer.getFirstName() + " adlı kişi tarafından kuruldu..");
+		
+		GameInfoManager gameinfomanager = new GameInfoManager();
+		gameinfomanager.setUp(gameinfo.getGameName() + " adlı oyun " + gameinfo.getStoreArea() + "gb lik alan kapladı ve " + gameinfo.getDownloadTime() + " saatte indi..");
+		
+		
+		Utils.runİnterfaces(interFaces, gameinfo.getGameName());
+		
+	}
+}

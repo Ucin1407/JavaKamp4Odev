@@ -1,0 +1,10 @@
+public class Utils {
+  
+	public static void runİnterfaces(interfaces [] interFaces, String product) {
+		for(interfaces interFace : interFaces) {
+			interFace.add(product);
+			interFace.pay(product);
+			interFace.setUp(product);
+		}
+	}
+}

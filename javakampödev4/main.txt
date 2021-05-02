@@ -1,0 +1,23 @@
+public class Main {
+
+	public static void main(String[] args) {
+		
+		interfaces[] interFaces = {new EmailManager(), new GameInfoManager()};
+		
+		CustomerManager customermanager = new CustomerManager(interFaces);
+		
+		GameInfoManager gameinfomanager = new GameInfoManager();
+		
+		GameInfo gameinfo = new GameInfo("NBA 2K20",240,90,20);
+		
+		Customer customer = new Customer(12345,"Uğurcan","Çırak","111111111",true);
+		customer.Login("Uğurcan","1111111111");
+         
+		
+		customermanager.add(customer, gameinfo);
+		customermanager.pay(customer, gameinfo);
+		customermanager.setUp(customer, gameinfo);
+		
+	}
+
+}

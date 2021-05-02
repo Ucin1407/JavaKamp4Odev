@@ -1,0 +1,25 @@
+public class GameInfoManager implements interfaces{
+
+	@Override
+	public void add(String product) {
+		
+		System.out.println("Ürün sepete eklendi " + product);
+	}
+
+	@Override
+	public void pay(String product) {
+		
+		System.out.println("Ödeme başarıyla tamamlandı " + product);
+		
+	}
+
+	@Override
+	public void setUp(String product) {
+		
+		System.out.println("Oyun kurulumu tamamlandı " + product);
+		
+	}
+	
+	
+
+}

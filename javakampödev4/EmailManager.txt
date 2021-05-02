@@ -1,0 +1,24 @@
+public class EmailManager implements interfaces{
+
+	@Override
+	public void add(String product) {
+	
+		System.out.println(product + " adlı oyun sepete eklendi emaili göderildi..");
+		
+	}
+
+	@Override
+	public void pay(String product) {
+		
+		System.out.println(product + " ödeme tamamlandı emaili göderildi..");
+		
+	}
+
+	@Override
+	public void setUp(String product) {
+		
+		System.out.println(product + " kurum tamamladı emaili göderildi..");
+		
+	}
+	
+}
